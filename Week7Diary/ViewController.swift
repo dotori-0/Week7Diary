@@ -23,6 +23,12 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+//        let vc = CodeViewController()
+//        let vc = CodeSnapViewController()
+        let vc = CodeSnap2ViewController()
+        vc.modalPresentationStyle = .overFullScreen
+        present(vc, animated: true)
+        
         testOpen()
         
 //        showAlert(title: "Test Alert", message: "Test Message", buttonTitle: "변경") { _ in
