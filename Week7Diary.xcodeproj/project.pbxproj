@@ -24,6 +24,8 @@
 		0A0162ED28AC81BC0069C4AF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0A0162EC28AC81BC0069C4AF /* SnapKit */; };
 		0A0162EF28AC822B0069C4AF /* CodeSnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0162EE28AC822B0069C4AF /* CodeSnapViewController.swift */; };
 		0A0162F128AC8C0D0069C4AF /* CodeSnap2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0162F028AC8C0D0069C4AF /* CodeSnap2ViewController.swift */; };
+		0AB4DAE628ADDF0A0096C5A6 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB4DAE528ADDF0A0096C5A6 /* UIViewController+Extension.swift */; };
+		0AB4DAE828ADE6100096C5A6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB4DAE728ADE6100096C5A6 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		0A0162E928AC71B40069C4AF /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
 		0A0162EE28AC822B0069C4AF /* CodeSnapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSnapViewController.swift; sourceTree = "<group>"; };
 		0A0162F028AC8C0D0069C4AF /* CodeSnap2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSnap2ViewController.swift; sourceTree = "<group>"; };
+		0AB4DAE528ADDF0A0096C5A6 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		0AB4DAE728ADE6100096C5A6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,11 +115,13 @@
 		0A01625228AB1FC90069C4AF /* Week7Diary */ = {
 			isa = PBXGroup;
 			children = (
+				0AB4DAE228ADDEF80096C5A6 /* Extensions */,
 				0A0162E828AC718E0069C4AF /* CodeBase */,
 				0A01629128AB3A380069C4AF /* Walkthrough */,
 				0A01625328AB1FC90069C4AF /* AppDelegate.swift */,
 				0A01625528AB1FC90069C4AF /* SceneDelegate.swift */,
 				0A01625728AB1FC90069C4AF /* ViewController.swift */,
+				0AB4DAE728ADE6100096C5A6 /* ProfileViewController.swift */,
 				0A01625928AB1FC90069C4AF /* Main.storyboard */,
 				0A01625C28AB1FCB0069C4AF /* Assets.xcassets */,
 				0A01625E28AB1FCB0069C4AF /* LaunchScreen.storyboard */,
@@ -160,6 +166,14 @@
 				0A0162F028AC8C0D0069C4AF /* CodeSnap2ViewController.swift */,
 			);
 			path = CodeBase;
+			sourceTree = "<group>";
+		};
+		0AB4DAE228ADDEF80096C5A6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0AB4DAE528ADDF0A0096C5A6 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,10 +279,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A01629928AB417B0069C4AF /* SecondViewController.swift in Sources */,
+				0AB4DAE628ADDF0A0096C5A6 /* UIViewController+Extension.swift in Sources */,
 				0A01625828AB1FC90069C4AF /* ViewController.swift in Sources */,
 				0A0162F128AC8C0D0069C4AF /* CodeSnap2ViewController.swift in Sources */,
 				0A01625428AB1FC90069C4AF /* AppDelegate.swift in Sources */,
 				0A01629B28AB41960069C4AF /* ThirdViewController.swift in Sources */,
+				0AB4DAE828ADE6100096C5A6 /* ProfileViewController.swift in Sources */,
 				0A0162EF28AC822B0069C4AF /* CodeSnapViewController.swift in Sources */,
 				0A01625628AB1FC90069C4AF /* SceneDelegate.swift in Sources */,
 				0A0162EA28AC71B40069C4AF /* CodeViewController.swift in Sources */,
