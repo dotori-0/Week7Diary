@@ -65,13 +65,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ogq-hv-xl6">
-                                <rect key="frame" x="157" y="182" width="100" height="5"/>
+                                <rect key="frame" x="202" y="182" width="10" height="5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="5" id="3hX-IM-JB4"/>
-                                    <constraint firstAttribute="width" constant="100" id="r9P-wg-oTz"/>
+                                    <constraint firstAttribute="width" constant="10" id="r9P-wg-oTz"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pawprint.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="rGg-fN-ne7">
+                                <rect key="frame" x="314" y="74.5" width="70" height="69"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="iTO-pc-cab"/>
+                                    <constraint firstAttribute="height" constant="70" id="ipb-qI-80T"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.82941126740000004" green="0.86271431919999997" blue="0.95251156589999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -80,10 +88,13 @@
                             <constraint firstItem="Ogq-hv-xl6" firstAttribute="top" secondItem="cdA-Hc-noI" secondAttribute="bottom" constant="8" id="Er9-Ap-dnj"/>
                             <constraint firstItem="cdA-Hc-noI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="ISo-74-T0U"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="cdA-Hc-noI" secondAttribute="trailing" constant="30" id="Me3-yG-FTt"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="rGg-fN-ne7" secondAttribute="trailing" constant="30" id="ghK-QA-aFi"/>
+                            <constraint firstItem="rGg-fN-ne7" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="ogm-7H-fpa"/>
                             <constraint firstItem="cdA-Hc-noI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="yoQ-Rp-ipN"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="rGg-fN-ne7" id="LIu-Gf-fux"/>
                         <outlet property="lineView" destination="Ogq-hv-xl6" id="NQN-bz-AoO"/>
                         <outlet property="walkthroughLabel" destination="cdA-Hc-noI" id="tMc-rn-aTf"/>
                     </connections>
@@ -124,6 +135,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="pawprint.fill" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
