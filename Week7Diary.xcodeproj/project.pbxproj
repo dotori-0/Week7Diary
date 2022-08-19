@@ -26,6 +26,11 @@
 		0A0162F128AC8C0D0069C4AF /* CodeSnap2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0162F028AC8C0D0069C4AF /* CodeSnap2ViewController.swift */; };
 		0AB4DAE628ADDF0A0096C5A6 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB4DAE528ADDF0A0096C5A6 /* UIViewController+Extension.swift */; };
 		0AB4DAE828ADE6100096C5A6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB4DAE728ADE6100096C5A6 /* ProfileViewController.swift */; };
+		0AB4DAEB28AF12760096C5A6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB4DAEA28AF12760096C5A6 /* BaseViewController.swift */; };
+		0AB4DAEF28AF14430096C5A6 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB4DAEE28AF14430096C5A6 /* WriteViewController.swift */; };
+		0AB4DAF128AF169A0096C5A6 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB4DAF028AF169A0096C5A6 /* BaseView.swift */; };
+		0AB4DAF328AF179F0096C5A6 /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB4DAF228AF179F0096C5A6 /* WriteView.swift */; };
+		0AB4DAF628AF2CFD0096C5A6 /* BlackRadiusTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB4DAF528AF2CFD0096C5A6 /* BlackRadiusTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +84,11 @@
 		0A0162F028AC8C0D0069C4AF /* CodeSnap2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSnap2ViewController.swift; sourceTree = "<group>"; };
 		0AB4DAE528ADDF0A0096C5A6 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		0AB4DAE728ADE6100096C5A6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		0AB4DAEA28AF12760096C5A6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		0AB4DAEE28AF14430096C5A6 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
+		0AB4DAF028AF169A0096C5A6 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		0AB4DAF228AF179F0096C5A6 /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
+		0AB4DAF528AF2CFD0096C5A6 /* BlackRadiusTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackRadiusTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +125,8 @@
 		0A01625228AB1FC90069C4AF /* Week7Diary */ = {
 			isa = PBXGroup;
 			children = (
+				0AB4DAE928AF125B0096C5A6 /* Utility */,
+				0AB4DAEC28AF141C0096C5A6 /* Views */,
 				0AB4DAE228ADDEF80096C5A6 /* Extensions */,
 				0A0162E828AC718E0069C4AF /* CodeBase */,
 				0A01629128AB3A380069C4AF /* Walkthrough */,
@@ -174,6 +186,41 @@
 				0AB4DAE528ADDF0A0096C5A6 /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0AB4DAE928AF125B0096C5A6 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				0AB4DAF428AF2CD80096C5A6 /* CustomViews */,
+				0AB4DAEA28AF12760096C5A6 /* BaseViewController.swift */,
+				0AB4DAF028AF169A0096C5A6 /* BaseView.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		0AB4DAEC28AF141C0096C5A6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0AB4DAED28AF142A0096C5A6 /* Diary */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0AB4DAED28AF142A0096C5A6 /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				0AB4DAEE28AF14430096C5A6 /* WriteViewController.swift */,
+				0AB4DAF228AF179F0096C5A6 /* WriteView.swift */,
+			);
+			path = Diary;
+			sourceTree = "<group>";
+		};
+		0AB4DAF428AF2CD80096C5A6 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				0AB4DAF528AF2CFD0096C5A6 /* BlackRadiusTextField.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,16 +325,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AB4DAF328AF179F0096C5A6 /* WriteView.swift in Sources */,
+				0AB4DAEB28AF12760096C5A6 /* BaseViewController.swift in Sources */,
+				0AB4DAF628AF2CFD0096C5A6 /* BlackRadiusTextField.swift in Sources */,
 				0A01629928AB417B0069C4AF /* SecondViewController.swift in Sources */,
 				0AB4DAE628ADDF0A0096C5A6 /* UIViewController+Extension.swift in Sources */,
 				0A01625828AB1FC90069C4AF /* ViewController.swift in Sources */,
 				0A0162F128AC8C0D0069C4AF /* CodeSnap2ViewController.swift in Sources */,
 				0A01625428AB1FC90069C4AF /* AppDelegate.swift in Sources */,
+				0AB4DAEF28AF14430096C5A6 /* WriteViewController.swift in Sources */,
 				0A01629B28AB41960069C4AF /* ThirdViewController.swift in Sources */,
 				0AB4DAE828ADE6100096C5A6 /* ProfileViewController.swift in Sources */,
 				0A0162EF28AC822B0069C4AF /* CodeSnapViewController.swift in Sources */,
 				0A01625628AB1FC90069C4AF /* SceneDelegate.swift in Sources */,
 				0A0162EA28AC71B40069C4AF /* CodeViewController.swift in Sources */,
+				0AB4DAF128AF169A0096C5A6 /* BaseView.swift in Sources */,
 				0A01629528AB3A9C0069C4AF /* FirstViewController.swift in Sources */,
 				0A01629728AB41300069C4AF /* WalkthroughViewController.swift in Sources */,
 			);
