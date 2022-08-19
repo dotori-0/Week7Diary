@@ -29,8 +29,8 @@ class ViewController: UIViewController {
         
 //        print("nameButton.showsTouchWhenHighlighted: \(view.showsTouchWhenHighlighted)")  // false
 //        view.showsTouchWhenHighlighted = true
-        print("view.isHighlighted: \(view.isHighlighted)")  // false
-        view.isHighlighted = true
+//        print("view.isHighlighted: \(view.isHighlighted)")  // false
+//        view.isHighlighted = true
         return view
     }()
     
@@ -41,16 +41,39 @@ class ViewController: UIViewController {
         configure()
         
         nameButton.addTarget(self, action: #selector(nameButtonClicked), for: .touchUpInside)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(saveButtonNotificationObserver(notification:)), name: NSNotification.Name("saveButtonNotification"), object: nil)
+    }
+    
+    @objc func saveButtonNotificationObserver(notification: NSNotification) {
+        if let name = notification.userInfo?["name"] as? String {
+            print(name)
+            self.nameButton.setTitle(name, for: .normal)
+        } else {
+            
+        }
     }
     
     
     @objc func nameButtonClicked() {
-        let vc = ProfileViewController()
-        vc.saveButtonActionHandler = {
-            self.nameButton.setTitle(vc.nameTextField.text, for: .normal)
-        }
+        NotificationCenter.default.post(name: NSNotification.Name("TEST"), object: nil, userInfo: ["name": "\(Int.random(in: 1...100))", "value": 123456])
         
-//        present(vc, animated: true)
+        
+        let vc = ProfileViewController()
+//        vc.saveButtonActionHandler = {
+//            self.nameButton.setTitle(vc.nameTextField.text, for: .normal)
+//        }
+        vc.saveButtonActionHandler = { name in
+            self.nameButton.setTitle(name, for: .normal)
+        }
+//        vc.testHandler = {
+//            return 100
+//        }
+//        vc.testTitle = "테스트"
+        
+//        let vc = WriteViewController()
+        
+        present(vc, animated: true)
 //        present(ProfileViewController(), animated: true)
     }
     

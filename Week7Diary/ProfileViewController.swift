@@ -7,7 +7,13 @@
 
 import UIKit
 
+extension NSNotification.Name {
+    static let saveButton = NSNotification.Name("saveButtonNotification")
+}
+
 class ProfileViewController: UIViewController {
+    
+    var testTitle: String?
     
     let saveButton: UIButton = {
         let view = UIButton()
@@ -24,7 +30,10 @@ class ProfileViewController: UIViewController {
         return view
     }()
     
-    var saveButtonActionHandler: (() -> ())?  // 함수 자체
+//    var saveButtonActionHandler: (() -> ())?  // 함수 자체
+    var saveButtonActionHandler: ((String) -> ())?  // 함수 자체
+    
+    
     
     func configure() {
         [saveButton, nameTextField].forEach { view.addSubview($0) }
@@ -49,12 +58,32 @@ class ProfileViewController: UIViewController {
         configure()
         
         saveButton.addTarget(self, action: #selector(saveButtonClicked), for: .touchUpInside)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(saveButtonNotificationObserver(notification:)), name: NSNotification.Name("TEST"), object: nil)
     }
     
+    @objc func saveButtonNotificationObserver(notification: NSNotification) {
+        print(self, #function)
+        if let name = notification.userInfo?["name"] as? String {
+            print(name)
+            self.nameTextField.text = name
+        } else {
+            
+        }
+    }
+    
+    var testHandler: (() -> Int)?
     
     @objc func saveButtonClicked() {
-        // 값 전달 기능 실행 -> 클로저 구문 활용
-        saveButtonActionHandler?()
+        // 2. Notification
+        // ☘️ 3 굳이.. 스니펫으로
+//        NotificationCenter.default.post(name: NSNotification.Name("saveButtonNotification"), object: nil, userInfo: ["name": nameTextField.text!, "value": 123456])
+        NotificationCenter.default.post(name: .saveButton, object: nil, userInfo: ["name": nameTextField.text!, "value": 123456])
+        
+        // 1. 값 전달 기능 실행 -> 클로저 구문 활용
+//        saveButtonActionHandler?()
+//        saveButtonActionHandler?(nameTextField.text!)
+//        print(testHandler?())
         
         // 화면 Dismiss
         dismiss(animated: true)
